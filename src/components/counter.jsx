@@ -1,8 +1,14 @@
-import React, { Component } from 'react'; // import thru imrc !!! NECESARRY IMPORT
+import React, { Component } from 'react'; // import thru imrc !!! NECESARRY IMPORT checkout extension Simple React Snippets
 
-class Counter extends Component { // import thru cc and add class name
+class Counter extends Component { // import thru cc and add class name (checkout extension Simple React Snippets)
+    // constructor() {
+    //     super()
+    //     this.handleIncrement = this.handleIncrement.bind(this)
+    // }
+
     state = {
         count: 0,
+        tags: ['tag1', 'tag2', 'tag3'],
     };
 
     // we can add styles to element by creating object with styles
@@ -13,14 +19,37 @@ class Counter extends Component { // import thru cc and add class name
     //     fontWeight: 'bold'
     // }
 
+    //* conditional rendering
+    renderTags() {
+        if (this.state.tags.length === 0) {
+            return (<p>There are no tags!</p>);
+        }
+
+        return (
+            <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+        );
+    }
+
+    //* note used via reference (/w brackets in the end)
+    //* if NOT used like arrow function then needed to implement contructor as above
+    handleIncrement = () => {
+        //console.warn('Increment Clicked', this);
+        //* setState is built-in fn from imported Component
+        this.setState({count: this.state.count + 1})
+    }
+
     render() { 
         return (
             <>
-                <span className={ this.getBadgeClasses() }>{ this.formatCount() }</span>
-                <button className='btn btn-secondary btn-sm'>Increment</button>
+                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <button onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
+                <div>{this.renderTags()}</div>
             </>
         );
     }
+
+    //? in case to pass parameter on event then use wrapper arrow function
+    //? <button onClick={() => this.handleIncrement()} >Increment</button>
 
     getBadgeClasses() {
         let classes = 'badge m-2 badge-';
