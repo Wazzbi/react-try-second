@@ -12,9 +12,11 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Tutorial
-follow https://www.youtube.com/watch?v=Ke90Tje7VS0 (React Tutorial for Beginners [React js]) from 1:16:26 to continue
+
+follow https://www.youtube.com/watch?v=Ke90Tje7VS0 (React Tutorial for Beginners [React js]) from 1:34:17 to continue
 
 ### Tutorial PART 1 ( < 1:16:26 )
+
 JSX (javascript / xml)
 Rendering list (see renderTags)
 Conditional rendering (see renderTags)
