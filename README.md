@@ -15,6 +15,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 follow https://www.youtube.com/watch?v=Ke90Tje7VS0 (React Tutorial for Beginners [React js]) from 1:54:44 to continue
 
+REDUX : https://www.youtube.com/watch?v=poQXNp9ItL4
+
 ### Tutorial PART 1 ( < 1:16:26 )
 
 JSX (javascript / xml)
@@ -22,3 +24,12 @@ Rendering list (see renderTags)
 Conditional rendering (see renderTags)
 Handling events (use arrow fn to bind THIS)
 Updating state (update STATE via setState())
+
+### Tutorial PART 2 ( > 1:16:26 )
+
+Props
+Raising and handling events
+Lifting the state
+Functional components
+Multiple components in sync (raise state controler above these components)
+Lifecycle hooks (constractor, render, componentDidMount / render, componentDidUpdate / componentWillUnmount)
